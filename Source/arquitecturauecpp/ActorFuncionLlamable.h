@@ -4,29 +4,25 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Components/SphereComponent.h"
-#include "NuevoActorEjemplo.generated.h"
+#include "ActorFuncionLlamable.generated.h"
 
 UCLASS()
-class ARQUITECTURAUECPP_API ANuevoActorEjemplo : public AActor
+class ARQUITECTURAUECPP_API AActorFuncionLlamable : public AActor
 {
 	GENERATED_BODY()
 	
-public:
+public:	
 	// Sets default values for this actor's properties
-	ANuevoActorEjemplo();
+	AActorFuncionLlamable();
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	USphereComponent* _esfera;
-	TArray<AActor*> _spawned;
-	static constexpr float CD = 5.0f;
-	float _counterDelete = CD;
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable)
+	void SaySomething(const FText& text);
 };

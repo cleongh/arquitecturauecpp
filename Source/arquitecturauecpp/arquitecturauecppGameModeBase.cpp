@@ -3,3 +3,8 @@
 
 #include "arquitecturauecppGameModeBase.h"
 
+#include "CPPAdventurer.h"
+
+AarquitecturauecppGameModeBase::AarquitecturauecppGameModeBase() {
+	DefaultPawnClass = ACPPAdventurer::StaticClass();
+}

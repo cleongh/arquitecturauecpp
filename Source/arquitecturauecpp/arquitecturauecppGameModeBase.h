@@ -13,5 +13,6 @@ UCLASS()
 class ARQUITECTURAUECPP_API AarquitecturauecppGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+	AarquitecturauecppGameModeBase();
 };
